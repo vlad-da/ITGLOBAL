@@ -1,0 +1,54 @@
+.main-input {
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    
+    &__label {
+        color: #2E3238; 
+        font-size: 14px; 
+        font-family: Open Sans; 
+        font-weight: 600; 
+        line-height: 20px;
+       
+    }
+
+    &__required {
+        &::before {
+            content: '*';
+            color: #B21F00; 
+            font-size: 14px; 
+            font-family: Open Sans; 
+            font-weight: 600; 
+            line-height: 20px;
+            margin-right: 4px;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        column-gap: 4px;
+    }
+    
+    &__input {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+    }
+    
+    input {
+        padding: 0.375rem 8px;
+        background: #FCFCFD;
+        border-radius: 0.25rem; 
+        overflow: hidden; 
+        border: 0.0625rem #D5D8DD solid;
+        font-size: 0.875rem;
+        font-weight: 400; 
+        line-height: 1.25rem;
+        outline: 0;
+        color: #000;
+        height: 32px;
+        width: 100%;
+    }
+
+}

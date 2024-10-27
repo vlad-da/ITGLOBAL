@@ -1,0 +1,27 @@
+.user {
+    display: flex;
+    column-gap: 0.5rem;
+    align-items: center;
+
+    &__img {
+        position: relative;
+
+        img {
+            max-width: fit-content;
+            border-radius: 1.5rem;
+        }
+    }
+
+    &__name {
+        color: #2E3238; 
+        font-size: 0.875rem; 
+        font-weight: 400; 
+        line-height: 1.25rem; 
+        word-wrap: break-word;
+        width: max-content;
+
+        @media (width< 768px) {
+            display: none;
+        }
+    }
+}

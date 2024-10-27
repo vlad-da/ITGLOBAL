@@ -1,0 +1,19 @@
+.main-form {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+
+
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+    }
+
+
+}
+
