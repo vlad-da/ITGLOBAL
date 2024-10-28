@@ -6,12 +6,30 @@ import Pin from '../../assets/sidebar/pin.svg'
 import MainAsideListItem from '../main-aside-list-item/main-aside-list-item';
 import {asideFolders} from '../../mocks/main-form'
 import MainForm from '../main-form/main-form'
-import Button from '../button/button';
+import ButtonIcon from '../button-icon/button-icon';
 import Search from '../search/search';
 import Dots from '../../assets/icons/dots.svg'
 import MainAsideButton from '../main-aside-button/main-aside-button';
+import Modal from '../modal/modal';
+import { useState, useEffect } from 'react';
+import ButtonText from '../button-text/button-text';
 const Main = () => {
+    useEffect(() => {
+
+        const handleEsc = (event) => {
+            if (event.key === 'Escape') {
+                setModalActive(false);
+            }
+        };
+        window.addEventListener('keydown', handleEsc);
+
+        return () => {
+            window.removeEventListener('keydown', handleEsc);
+    };
+    }, []);
+    const [modalActive, setModalActive] = useState(false)
     return (
+        <>
         <section className='main'>
             <div className="main-header">
                 <div className="main-header__task">
@@ -19,20 +37,16 @@ const Main = () => {
                         Подзадача
                     </div>
                     <div className="main-header__create">
-                        Создать
+                        <ButtonText text='Создать' variant='btn-border' close={setModalActive}/>
                     </div>
                 </div>
                 <div className="main-header__btns">
-                    <div className="main-header__save">
-                        Сохранить
-                    </div>
-                    <div className="main-header__exit">
-                        Сохранить и выйти
-                    </div>
-                    <div className="main-header__dots">
-                        <Button icon={Dots} />
-                    </div>
+                    <ButtonText text='Сохранить' variant='btn-bg' />
+                    <ButtonText text='Сохранить и выйти' variant='btn-border' />
                 </div>
+                <div className="main-header__dots">
+                        <ButtonIcon icon={Dots} />
+                    </div>
             </div>
             <div className="main-body">
                 <div className="main-body__title">
@@ -50,8 +64,8 @@ const Main = () => {
                     </div>
                     <div className='main-aside__body'>
                         <div className="main-aside__panel">
-                            <Search icon={Funnel} width={'100%'} />
-                            <Button icon={Pin} />
+                            <Search icon={Funnel} width={'13rem'} />
+                            <ButtonIcon icon={Pin} />
                         </div>
                         <div className="main-aside-list">
 
@@ -68,6 +82,8 @@ const Main = () => {
                 
             </aside>
         </section>
+        <Modal modalActive={modalActive}  setModalActive={setModalActive}/>
+        </>
     )
 }
 

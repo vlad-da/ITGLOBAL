@@ -10,13 +10,28 @@ const MainForm = () => {
                 <div className="main-form__wrapper">
 
 
-
-                    {Object.values(upForm).map(item => <MainInputRow data={item}/>)}
+                    {Object.values(upForm).map(item => (
+                         <div className="main-form__row">
+                            {item.map((row) => (
+                                row.type === 'input' ? 
+                                <MainInput data={row} /> :
+                                <MainSelect data={row} />
+                            ))}
+                        </div>
+                    ))}
 
                     <MainInput data={input} />
                     <MainSelect data={selectForm} />
                     
-                    {Object.values(downForm).map(item => <MainInputRow data={item}/>)}
+                    {Object.values(downForm).map(item => (
+                         <div className="main-form__row">
+                            {item.map((row) => (
+                                row.type === 'input' ? 
+                                <MainInput data={row} /> :
+                                <MainSelect data={row} />
+                            ))}
+                        </div>
+                    ))}
 
                 </div>
             </form>

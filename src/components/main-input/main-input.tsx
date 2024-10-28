@@ -1,5 +1,5 @@
 import './main-input.scss';
-import Button from '../button/button';
+import ButtonIcon from '../button-icon/button-icon';
 import SearchShown from '../../assets/icons/search-shown.svg'
 import Plus from '../../assets/icons/plus.svg'
 import Calendar from '../../assets/icons/calendar.svg'
@@ -13,9 +13,9 @@ const MainInputRow = ({data}) => {
                 </label>
                 <div className='main-input__wrapper'>
                     <input className='main-input__input' type="text"  required={data.required} defaultValue={data.value} />
-                    {data.plusBtn && <Button icon={Plus} />}
-                    {data.searchBtn && <Button icon={SearchShown} />}
-                    {data.calendarBtn && <Button icon={Calendar} />}
+                    {data.plusBtn && <ButtonIcon icon={Plus} />}
+                    {data.searchBtn && <ButtonIcon icon={SearchShown} />}
+                    {data.calendarBtn && <ButtonIcon icon={Calendar} />}
                 </div>
                 
                 

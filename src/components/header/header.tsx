@@ -1,7 +1,7 @@
 import './header.scss';
 import Logo from "../logo/logo";
 import Search from "../search/search";
-import Button from "../button/button";
+import ButtonIcon from "../button-icon/button-icon";
 import User from "../user/user";
 import Cogwheel from '../../assets/icons/cogwheel.svg';
 import SearchIcon from '../../assets/icons/search.svg';
@@ -19,7 +19,7 @@ const Header = () => {
             </div>
             
             <User />
-            <Button icon={Cogwheel} />
+            <ButtonIcon icon={Cogwheel} />
         </div>
     )
 }
