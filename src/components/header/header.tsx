@@ -6,12 +6,11 @@ import User from "../user/user";
 import Cogwheel from '../../assets/icons/cogwheel.svg';
 import SearchIcon from '../../assets/icons/search.svg';
 import Slide from '../../assets/sidebar/slide.svg'
-import MainAsideButton from '../main-aside-button/main-aside-button';
 const Header = () => {
     return (
         <div className='header'>
             <div className='header__slide'>
-                <MainAsideButton icon={Slide} />
+                <img src={Slide} alt="slide" />
             </div>
             <Logo />
             <div className='header__search'>

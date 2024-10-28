@@ -4,8 +4,9 @@ import Main from '../../components/main/main';
 const TaskPage = (): JSX.Element => {
     return (
     <>
-        <Header />
+        <Header />    
         <Main />
+        
     </>
     )
 } 

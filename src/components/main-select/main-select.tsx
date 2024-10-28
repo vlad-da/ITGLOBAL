@@ -6,8 +6,6 @@ import Plus from '../../assets/icons/plus.svg'
 import Calendar from '../../assets/icons/calendar.svg'
 import ButtonIcon from '../button-icon/button-icon';
 const MainSelect = ({data}) => {
-    console.log(data);
-    
     return (
         <div className='main-form-select'>
             <div className='main-form-select__title'>{data.name}</div>
