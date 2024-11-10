@@ -39,6 +39,11 @@
     align-items: center;
     justify-content: space-between;
     padding: 24px;
+
+    @media (width < 768px) {
+        padding: 12px 16px;
+    }
+
     &__subtitle {
         font-size: 20px; 
         font-family: Montserrat; 
