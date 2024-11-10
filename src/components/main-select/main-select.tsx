@@ -5,13 +5,36 @@ import SearchShown from '../../assets/icons/search-shown.svg'
 import Plus from '../../assets/icons/plus.svg'
 import Calendar from '../../assets/icons/calendar.svg'
 import ButtonIcon from '../button-icon/button-icon';
-const MainSelect = ({data}) => {
+
+
+type People = {
+    name : string,
+    close: boolean,
+}
+
+type Item = {
+    name : string,
+    type?: string,
+    required: boolean,
+    plusBtn: boolean,
+    searchBtn: boolean,
+    calendarBtn: boolean,
+    value?: string,
+    people: People[],
+}
+
+type Data = {
+    data: Item;
+}
+
+const MainSelect = ({data}:Data) => {
+    
     return (
         <div className='main-form-select'>
             <div className='main-form-select__title'>{data.name}</div>
             <div className="main-form-select__wrapper">
                 <div className='main-form-select__list'>
-                    {data.people.map(item => (
+                    {data?.people.map(item => (
                         <div className='main-form-select__item'>
                             <div className="main-form-select__item-title">
                                 {item.name}

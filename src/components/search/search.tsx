@@ -1,5 +1,11 @@
 import './search.scss';
-const Search = ({icon, width}) => {
+
+type Pops = {
+    icon?: string;
+    width?: string;
+}
+
+const Search = ({icon, width}:Pops) => {
     return (
         <div className='search-header'>
             <form className='search-header__form' action="" method="get">

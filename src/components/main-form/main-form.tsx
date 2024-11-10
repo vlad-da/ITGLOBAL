@@ -1,8 +1,7 @@
 import './main-form.scss';
 import { upForm, downForm, selectForm, input } from '../../mocks/main-form'
-import MainInputRow from '../main-input-row/main-input-row'
+import MainInput from '../main-input/main-input'
 import MainSelect from '../main-select/main-select';
-import MainInput from '../main-input/main-input';
 const MainForm = () => {
     return (
         <div className="main-form">

@@ -4,7 +4,23 @@ import SearchShown from '../../assets/icons/search-shown.svg'
 import Plus from '../../assets/icons/plus.svg'
 import Calendar from '../../assets/icons/calendar.svg'
 
-const MainInputRow = ({data}) => {
+
+
+type Item = {
+    name : string,
+    type?: string,
+    required: boolean,
+    plusBtn: boolean,
+    searchBtn: boolean,
+    calendarBtn: boolean,
+    value: string,
+}
+
+type Data = {
+    data: Item;
+}
+
+const MainInput = ({data}:Data) => {
     return (
         <>
             <div className='main-input'>
@@ -27,4 +43,4 @@ const MainInputRow = ({data}) => {
     )
 }
 
-export default MainInputRow;
+export default MainInput;

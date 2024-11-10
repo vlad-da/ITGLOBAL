@@ -2,7 +2,7 @@ import './button-icon.scss';
 
 type Icon = {
     icon: string,
-    setModalActive: (arg: boolean) => void;
+    setModalActive?: React.Dispatch<React.SetStateAction<boolean>> ;
 }
 const ButtonIcon = ({ icon, setModalActive }: Icon) => {
     

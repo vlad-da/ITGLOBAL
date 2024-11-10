@@ -9,6 +9,7 @@ export const upForm = {
             "searchBtn": false,
             "calendarBtn": false,
             "value" : '',
+            "people" : []
         },
         {
             "name": "Статус",
@@ -18,6 +19,7 @@ export const upForm = {
             "searchBtn": false,
             "calendarBtn": false,
             "value" : '',
+            "people" : []
         },
     ],
     'row2': [
@@ -29,6 +31,7 @@ export const upForm = {
             "searchBtn": false,
             "calendarBtn": false,
             "value" : '',
+            "people" : []
         },
         {
             "name": "Продукт",
@@ -38,6 +41,7 @@ export const upForm = {
             "searchBtn": true,
             "calendarBtn": false,
             "value" : '',
+            "people" : []
         },
     ],
     'row3': [
@@ -49,6 +53,7 @@ export const upForm = {
             "searchBtn": false,
             "calendarBtn": false,
             "value" : '',
+            "people" : []
         },
         {
             "name": "Приоритет",
@@ -58,6 +63,7 @@ export const upForm = {
             "searchBtn": false,
             "calendarBtn": false,
             "value" : '',
+            "people" : []
         },
     ],
     'row4': [
@@ -104,6 +110,7 @@ export const downForm = {
             "searchBtn": false,
             "calendarBtn": true,
             "value" : '22.10.2024',
+            "people" : []
         },
         {
             "name": "Когда создано",
@@ -113,6 +120,7 @@ export const downForm = {
             "searchBtn": false,
             "calendarBtn": true,
             "value" : '22.10.2024',
+            "people" : []
         },
     ],
     'row2': [

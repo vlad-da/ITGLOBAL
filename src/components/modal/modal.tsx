@@ -5,7 +5,13 @@ import MainSelect from '../main-select/main-select';
 import ButtonIcon from '../button-icon/button-icon';
 import Close from '../../assets/icons/close-x.svg'
 import ButtonText from '../button-text/button-text';
-const Modal = ({modalActive, setModalActive}) => {
+
+type Props = {
+    modalActive: boolean;
+    setModalActive: React.Dispatch<React.SetStateAction<boolean>> ;
+}
+
+const Modal = ({modalActive , setModalActive}: Props) => {
     return (
         <div className={modalActive ? "modal active" : "modal"} onClick={() => setModalActive(false)}>
             <div className="modal__content" onClick={e => e.stopPropagation()}>

@@ -12,7 +12,7 @@ import Aside from '../aside/aside';
 const Main = () => {
     useEffect(() => {
 
-        const handleEsc = (event) => {
+        const handleEsc = (event: { key: string; }) => {
             if (event.key === 'Escape') {
                 setModalActive(false);
             }
@@ -23,8 +23,8 @@ const Main = () => {
             window.removeEventListener('keydown', handleEsc);
     };
     }, []);
-    const [modalActive, setModalActive] = useState(false);
-    const [asideActive, setAsideActive] = useState(true);
+    const [modalActive, setModalActive] = useState<boolean>(false);
+    const [asideActive, setAsideActive] = useState<boolean>(true);
     return (
         <>
         <div className='wrapper'>
