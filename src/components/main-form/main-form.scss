@@ -21,6 +21,7 @@
     
         @media ( width <= 991px) {
             grid-template-columns: 1fr;
+            row-gap: 1rem;
         }
     }
 
