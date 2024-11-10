@@ -44,7 +44,7 @@ const Main = () => {
                         <ButtonText text='Сохранить и выйти' variant='btn-border' />
                     </div>
                     <div className="main-header__dots">
-                            <ButtonIcon icon={Dots} />
+                            <ButtonIcon setModalActive={setModalActive} icon={Dots} />
                         </div>
                 </div>
                 <div className="main-body">

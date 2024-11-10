@@ -2,12 +2,13 @@ import './button-icon.scss';
 
 type Icon = {
     icon: string,
-    setModalActive?: React.Dispatch<React.SetStateAction<boolean>> ;
+    setModalActive?: React.Dispatch<React.SetStateAction<boolean>>,
+    modalActive?: boolean,
 }
-const ButtonIcon = ({ icon, setModalActive }: Icon) => {
+const ButtonIcon = ({ icon, setModalActive, modalActive }: Icon) => {
     
     return (
-        <div className='button' onClick={setModalActive ? () => setModalActive(false) : () => false }>
+        <div className='button' onClick={setModalActive ? () => setModalActive(!modalActive) : () => false }>
             <img src={icon} />
         </div>
     )

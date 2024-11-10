@@ -24,7 +24,7 @@ const Modal = ({modalActive , setModalActive}: Props) => {
                             <ButtonText text='Отменить' variant='btn-border' close={() => setModalActive(false)} />
                         </div>
                         <div className="modal-header__close">
-                            <ButtonIcon setModalActive={setModalActive}  icon={Close} />
+                            <ButtonIcon modalActive= {modalActive} setModalActive={setModalActive}  icon={Close} />
                         </div>
                     </div>
                     <div className="modal-body">
