@@ -11,11 +11,12 @@ import React from 'react';
 type Props = {
     asideActive: boolean;
     setAsideActive: React.Dispatch<React.SetStateAction<boolean>> ;
+    widthWindow: number;
 }
 
-const Aside = ({ asideActive, setAsideActive }: Props) => {
+const Aside = ({ asideActive, setAsideActive, widthWindow }: Props) => {
     return (
-        <aside className='main-aside'style={{width: asideActive ? '336px' : '56px'}}>
+        <aside className='main-aside'style={{width: asideActive && widthWindow > 768 ? '336px' : '56px'}}>
             <div className="main-aside__wrapper">
                 <div className="main-aside__side">
                     <div className='main-aside__img' onClick={() => setAsideActive(!asideActive)}>
@@ -30,7 +31,7 @@ const Aside = ({ asideActive, setAsideActive }: Props) => {
                         <img src={Star} alt="icon" />
                     </div>
                 </div>
-                <div className= {asideActive ? 'main-aside__body active' : 'main-aside__body'}>
+                <div className= {asideActive && widthWindow > 768 ? 'main-aside__body active' : 'main-aside__body'}>
                     <div className="main-aside__panel">
                         <Search icon={Funnel} width={'13rem'} />
                         <ButtonIcon icon={Pin} />

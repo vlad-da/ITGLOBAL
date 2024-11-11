@@ -9,6 +9,7 @@ import Modal from '../modal/modal';
 import { useState, useEffect } from 'react';
 import ButtonText from '../button-text/button-text';
 import Aside from '../aside/aside';
+import { useResize } from '../../hook/useResize';
 const Main = () => {
     useEffect(() => {
 
@@ -42,11 +43,13 @@ const Main = () => {
             document.addEventListener('scroll', handleScroll);
         }
     }, [scrolled])
+
+    const widthWindow = useResize();
     return (
         <>
         <div className='wrapper'>
-            <Aside asideActive={asideActive} setAsideActive={setAsideActive} />
-            <section className={`main ${asideActive ? 'main-short' : ''}` }>
+            <Aside widthWindow={widthWindow.width} asideActive={asideActive} setAsideActive={setAsideActive} />
+            <section className={`main ${asideActive && widthWindow.width > 768 ? 'main-short' : ''}` }>
                 <div className="main-header" data-active={scrolled}>
                     <div className="main-header__task">
                         <div className="main-header__subtusk">
