@@ -26,7 +26,7 @@ const Main = () => {
     }, []);
    
     const [modalActive, setModalActive] = useState<boolean>(false);
-    const [asideActive, setAsideActive] = useState<boolean>(false);
+    const [asideActive, setAsideActive] = useState<boolean>(true);
     const [scrolled, setScrolled] = useState<boolean>(false);
 
     useEffect(() => {
