@@ -1,18 +1,21 @@
 .wrapper {
     display: flex;
-    overflow: auto;
 }
 
 .main {
     position: relative;
-    width: 100%;
-    overflow: auto;
+    width: calc(100% - 56px);
     border-left: 1px solid #d5d8dd;
 
     @media (width < 768px) {
         padding-left: 0;
         border-left: none;
+        width: 100%;
     }
+}
+
+.main-short {
+    width: calc(100% - 336px);
 }
 .main-header {
     padding: 1rem 1rem 1rem 1rem;
@@ -23,6 +26,10 @@
     top: 0;
     background: #fff;
     z-index: 10;
+
+    &[data-active='true'] {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
+    }
 
     &__task {
         display: flex;

@@ -23,14 +23,31 @@ const Main = () => {
             window.removeEventListener('keydown', handleEsc);
     };
     }, []);
+   
     const [modalActive, setModalActive] = useState<boolean>(false);
     const [asideActive, setAsideActive] = useState<boolean>(true);
+    const [scrolled, setScrolled] = useState<boolean>(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const isScrolled = window.scrollY > 10;
+            if (isScrolled !== scrolled) {
+                setScrolled(!scrolled);
+            }
+        };
+
+        document.addEventListener('scroll', handleScroll, {passive: true});
+
+        return () => {
+            document.addEventListener('scroll', handleScroll);
+        }
+    }, [scrolled])
     return (
         <>
         <div className='wrapper'>
             <Aside asideActive={asideActive} setAsideActive={setAsideActive} />
-            <section className='main'>
-                <div className="main-header">
+            <section className={`main ${asideActive ? 'main-short' : ''}` }>
+                <div className="main-header" data-active={scrolled}>
                     <div className="main-header__task">
                         <div className="main-header__subtusk">
                             Подзадача
